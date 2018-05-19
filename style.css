@@ -1,0 +1,169 @@
+body, html{
+	/*position: relative;*/
+	/*padding: 0;*/
+	/*margin: 0;*/
+	/*background: beige;*/
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden; 
+		/*z-index: 1;*/
+}
+
+.block{
+	margin: 100px;
+	height: 50px;
+	width: 50px;
+	background: red;
+}
+
+.block4{
+	position: absolute;
+	left: 50%;
+	margin-bottom: 0;
+	bottom: 0;
+}
+
+.block5{
+	position: absolute;
+	top: 25%;
+	right: 0;
+	margin-right: 0;
+}
+
+
+
+
+.menu{
+	display: none;
+	position: absolute;
+	overflow: hidden;
+	height: 280px;
+	width: 140px;
+	border: 1px solid #000000;
+	background: azure;
+}
+
+.menu-on-js{
+	display: block;
+}
+
+
+.menu__list{
+	padding: 10px 0 10px 40px;
+	position: relative;
+	margin: 0;
+	list-style: none;
+	/*overflow: hidden;*/
+	/*height: 206px;*/
+	/*width: 140px;*/
+}
+
+.menu__list::before{
+	position: absolute;
+	content: '';
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 40px;
+	height: 100vh;
+	background: #cccccc;
+	border-right: 1px solid #000000;
+}
+
+.menu__list__item{
+	padding: 10px;
+	cursor: pointer;
+	transition: all .3s linear;
+}
+.menu__list__item:first-child{
+	margin-top: 0;
+}
+
+.menu__list__item:hover{
+	background: #cccccc;
+}
+
+.menu__list__item:last-child{
+	margin-bottom: 0;
+}
+
+.disabled{
+	background: gray;
+	cursor: default;
+}
+
+.disabled:hover{
+	background: gray;
+}
+
+.menu__list__item--more {
+	position: relative;
+}
+.menu__list__item--more:before{
+	content:"";
+	border-style: solid;
+	border-width: 5px 8px 5px 0;
+	border-color: transparent black transparent transparent;
+	position: absolute;
+	top: 35%;
+	right: 5px;
+	transform: rotate(180deg);
+}
+
+
+.menu__list--more{
+	list-style: none;
+	width: 140px;
+	left: 100%;
+	position: absolute;
+}
+
+.slide__btns{
+
+}
+.slide__btn{
+	position: absolute;
+	background: gray;
+	width: 140px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: transparent;
+}
+.slide__btn--bot{
+	bottom: -3px;
+}
+.slide__btn--top{
+	top: -3px;
+}
+.slide__btn--top:before{
+	content:"";
+	border-style: solid;
+	border-width: 8px 10px 8px 0;
+	border-color: transparent black transparent transparent;
+	position: absolute;
+	left: 50%;
+	transform: rotate(90deg);
+}
+
+.slide__btn--bot:before{
+	content:"";
+	border-style: solid;
+	border-width: 8px 10px 8px 0;
+	border-color: transparent black transparent transparent;
+	position: absolute;
+	left: 50%;
+	transform: rotate(-90deg);
+}
+
+
+.menu__right{
+	position: absolute;
+	left: -100%;
+	height: 280px;
+	width: 140px;
+	background: red;
+}
+
+
